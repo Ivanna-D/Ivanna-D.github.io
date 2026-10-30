@@ -46,20 +46,20 @@
   /* ---------- Layout: photo column + main text ---------- */
   .wrap {
     max-width: 1000px; margin: 0 auto; padding: 40px 16px 60px;
-    display: grid; grid-template-columns: 240px 1fr; gap: 48px;
+    display: grid; grid-template-columns: 340px 1fr; gap: 48px;
   }
   aside { text-align: center; }
   aside .sticky { position: sticky; top: 90px; }
   .photo {
-    width: 220px; height: 220px; object-fit: cover;
+    width: 330px; height: 330px; object-fit: cover;
     border-radius: 50%; border: 4px solid var(--card);
     display: block; margin: 0 auto;
   }
   .photo-fallback {
-    width: 220px; height: 220px; border-radius: 50%; margin: 0 auto;
+    width: 330px; height: 330px; border-radius: 50%; margin: 0 auto;
     background: var(--card); color: var(--accent);
     display: none; align-items: center; justify-content: center;
-    font-family: "Inter", sans-serif; font-size: 64px; font-weight: 600;
+    font-family: "Inter", sans-serif; font-size: 96px; font-weight: 600;
   }
   .side-info {
     margin-top: 14px; font-family: "Inter", sans-serif; font-size: 14px; color: var(--muted); line-height: 1.5;
@@ -117,8 +117,8 @@
   @media (max-width: 760px) {
     .wrap { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
     aside .sticky { position: static; }
-    .photo, .photo-fallback { width: 160px; height: 160px; }
-    .photo-fallback { font-size: 48px; }
+    .photo, .photo-fallback { width: 240px; height: 240px; }
+    .photo-fallback { font-size: 72px; }
     h1, .pron { text-align: center; }
     .skills { grid-template-columns: 1fr; gap: 2px; }
     .skills dd { margin-bottom: 10px; }
@@ -130,10 +130,9 @@
 <nav>
   <div class="inner">
     <a href="#about">Home</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
+    <a href="#interests">Research</a>
     <a href="#awards">Awards</a>
-    <a href="#outreach">Outreach</a>
+    <a href="#publications">Publications</a>
     <a href="cv.pdf">CV</a>
   </div>
 </nav>
@@ -142,7 +141,7 @@
   <aside>
     <div class="sticky">
       <!-- Upload your photo next to this file and name it photo.jpg -->
-      <img class="photo" src="photo.png" alt="Photo of Ivanna Dovbysh"
+      <img class="photo" src="photo.jpg" alt="Photo of Ivanna Dovbysh"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="photo-fallback" aria-hidden="true">ID</div>
       <div class="side-info">
@@ -152,10 +151,10 @@
       </div>
       <div class="links">
         <a href="mailto:ivanna.dovbysh@gmail.com">Email</a>
-        <!-- Replace the two # below with your real profile links -->
-        <a href="#">Scholar</a>
-        <a href="#">LinkedIn</a>
-        <a href="cv.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=fH6XUh0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/ivannadovbysh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/dovbysh_ivanna/" target="_blank" rel="noopener">Instagram</a>
+        <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
       </div>
     </div>
   </aside>
@@ -163,23 +162,25 @@
   <main>
     <section id="about">
       <h1>Ivanna Dovbysh</h1>
-      <div class="pron">Іванна Довбиш · Robotics &amp; Computer Vision</div>
+      <div class="pron">Іванна Довбиш · Robotics for Human Safety</div>
 
-      <p>I am a <strong>Fulbright scholar</strong> and M.S. student in Electrical Engineering at the <a href="https://www.ucf.edu/"><strong>University of Central Florida</strong></a>, where I work in the Learning, Communications, and Wireless Networks Lab with Prof. Nazanin Rahnavard.</p>
-      <p>I am currently a visiting researcher at the <a href="https://theairlab.org/"><strong>AirLab at Carnegie Mellon University</strong></a> with Prof. Sebastian Scherer, supported by an Edmund S. Muskie Professional Fellowship. There I build people-detection systems for the DARPA Triage Challenge, including thermal–NIR fusion for detecting people at night.</p>
-      <p>My research focuses on helping robots and assistive systems perceive the world reliably: detecting people in difficult conditions, estimating state from fused sensors, and guiding agents safely around moving obstacles. I received my B.S. with Honors in Automation and Instrumentation from <a href="https://kpi.ua/en"><strong>Igor Sikorsky Kyiv Polytechnic Institute</strong></a> in 2025, where I worked on quadrotor UAV attitude estimation.</p>
+      <p>I am a <strong>Fulbright scholar</strong> and M.S. student in Electrical Engineering at the <a href="https://www.ucf.edu/"><strong>University of Central Florida</strong></a>, where I work in the Learning, Communications, and Wireless Networks Lab with Prof. Nazanin Rahnavard. Using Meta Project Aria glasses, I am developing a system that detects moving obstacles and predicts their trajectories and possible collisions, with applications in safe driving and in helping people with impaired vision navigate crowded environments.</p>
+      <p>I received my B.S. with Honors from the <a href="https://kpi.ua/en/"><strong>National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”</strong></a>, specializing in Automation and Non-Destructive Testing Systems, where I was advised by <a href="https://asnk.kpi.ua/index.php/pro-kafedru/vykladachi/26-muraviov-oleksandr-volodymyrovych">Dr. Oleksandr Muraviov</a>. Most recently, I worked with <a href="https://theairlab.org/team/sebastian/">Prof. Sebastian Scherer</a> at the <a href="https://theairlab.org/"><strong>AirLab at Carnegie Mellon University</strong></a> on the DARPA Triage Challenge, developing people-detection systems for disaster response. Before that, I built interactive outreach tools with Dr. Benjamin Couturier at the <strong>LHCb experiment at CERN</strong>, and worked on vision-based navigation of quadrotor drones with <a href="https://atayebi.lakeheadu.ca">Prof. Abdelhamid Tayebi</a> at <strong>Lakehead University</strong> as a Mitacs Globalink Research Intern.</p>
 
-      <div class="callout">🏆 <strong>My video “Standards for the Usefulness of AI in Robotics” received the IROS 2026 Video Award!</strong></div>
+      <div class="callout">🎤 <strong>Upcoming talk:</strong> I've been invited to speak at Igor Sikorsky Kyiv Polytechnic Institute on <strong>November 16</strong> about studying abroad. Hope to see you online!</div>
     </section>
 
     <section id="interests">
       <h2>Research Interests</h2>
-      <h3>Robust Perception for Robots</h3>
-      <p>Detecting people and objects in hard, real-world conditions such as darkness, shadows, reflections and clutter, using data curation, model benchmarking and multimodal (thermal, NIR, RGB) sensor fusion.</p>
-      <h3>State Estimation &amp; Sensor Fusion for UAVs</h3>
-      <p>Attitude estimation, inertial navigation and SLAM that combine IMU, optical flow, cameras and LiDAR, plus using onboard sensor data to detect hardware faults such as damaged propellers.</p>
-      <h3>Assistive Vision &amp; Safe Guidance</h3>
-      <p>Wearable vision systems, built with Meta Project Aria glasses, that track and predict the motion of surrounding objects to guide drivers and visually impaired people along safe paths.</p>
+      <ul class="news">
+        <li>Robotics for disaster management</li>
+        <li>UAV state estimation &amp; sensor fusion</li>
+        <li>Robust perception in challenging conditions</li>
+        <li>Assistive vision &amp; safe guidance</li>
+        <li>Learning-based control &amp; control theory for robotics</li>
+        <li>Failure detection &amp; reliability in physical AI</li>
+        <li>Multimodal (thermal, NIR, RGB) data fusion</li>
+      </ul>
     </section>
 
     <section id="news">
@@ -192,69 +193,6 @@
         <li><span class="date">Aug 2025</span> — Started my M.S. at UCF as a <strong>Fulbright Graduate Student</strong>.</li>
         <li><span class="date">Jun 2025</span> — Graduated with Honors from Igor Sikorsky Kyiv Polytechnic Institute.</li>
       </ul>
-    </section>
-
-    <section id="research">
-      <h2>Research Experience</h2>
-
-      <div class="entry">
-        <div class="entry-head"><span>AirLab, Carnegie Mellon University</span><span class="entry-meta">May 2026 – Nov 2026</span></div>
-        <div class="entry-meta">Pittsburgh, PA · Advisor: Prof. Sebastian Scherer</div>
-        <p>Built a people-detection pipeline for the DARPA Triage Challenge. Curated a casualty-detection dataset of 12,000 frames and 30,000 bounding boxes, benchmarked RF-DETR, YOLO and GroundingDINO, and raised F0.5 from 0.418 to 0.644. Also developed an early-fusion thermal–NIR pipeline that cuts false nighttime detections in a single inference pass.</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head"><span>Learning, Communications, and Wireless Networks Lab, UCF</span><span class="entry-meta">Sep 2025 – present</span></div>
-        <div class="entry-meta">Orlando, FL · Advisor: Prof. Nazanin Rahnavard</div>
-        <p>Developing a Project Aria–based guidance system for drivers and visually impaired people: a real-time 20 FPS pipeline on RGB and stereo data that predicts obstacle motion and uses model predictive control for collision-aware guidance. Mentoring a team of 6 undergraduate students.</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head"><span>Intelligent Cyber-Physical Systems Lab, UCF</span><span class="entry-meta">Sep 2025 – Dec 2025</span></div>
-        <div class="entry-meta">Orlando, FL · Advisor: Prof. Truong Nghiem</div>
-        <p>Contributed to a loosely coupled SLAM framework fusing IMU, three RGB-D cameras and LiDAR for forests with changing light.</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head"><span>LHCb Experiment, CERN</span><span class="entry-meta">Sep 2024 – Nov 2024</span></div>
-        <div class="entry-meta">Geneva, Switzerland · Advisor: Dr. Benjamin Couturier</div>
-        <p>Built an interactive in-browser Python exercise (PyScript, Pyodide) for LHCb high-school outreach, then organized CERN lectures for about 200 Ukrainian students with Vilnius University.</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head"><span>Automatic Control Laboratory, Lakehead University</span><span class="entry-meta">May 2024 – Aug 2024</span></div>
-        <div class="entry-meta">Thunder Bay, Canada · Advisor: Prof. Abdelhamid Tayebi</div>
-        <p>Worked on vision-based indoor navigation of quadrotors with QDrone and Crazyflie platforms, motion capture and sensor fusion.</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head"><span>Quadrotor UAV Study, Igor Sikorsky Kyiv Polytechnic Institute</span><span class="entry-meta">May 2022 – Jun 2025</span></div>
-        <div class="entry-meta">Kyiv, Ukraine · Advisor: Prof. Oleksandr Muraviov</div>
-        <p>Developed attitude estimation and inertial navigation for a mini drone, fusing IMU and optical flow with Extended Kalman and complementary filters. Designed experiments on vibration, acoustic and IMU data from damaged propellers to build a multimodal damage-detection system.</p>
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <ol class="pubs">
-        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V., Bohdan, H. A., Momot, A. S. (2025). Autonomous UAV navigation: Technologies for orientation and localization. <span class="venue">Applied Issues of Mathematical Modelling.</span> <a href="https://doi.org/10.32782/mathematicalmodelling/2025-8-1-5">[DOI]</a></li>
-        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V. (2023). Dependence of the swarm-leader selection algorithm on the level of UAV autonomy. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, 34(73), 84–90.</li>
-        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V., Galagan, R. M., Bohdan, H. A., Momot, A. S. (2023). Power plants and energy sources of modern UAVs. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, 34(73), No. 5, 16–21.</li>
-        <li>Muraviov, O. V., <span class="me">Dovbysh, I. O.</span>, Galagan, R. M., Bohdan, H. A., Momot, A. S. (2023). Development prospects of technologies for increasing autonomy level of UAVs. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, (73) 2, 199–205.</li>
-        <li>Dovbysh, O. S., Bakhtiarova, K. Sh., Dovbysh, Y. V., <span class="me">Dovbysh, I. O.</span> (2024). Modern aspects of organizing independent work of students of professional pre-higher education institutions during wartime. <span class="venue">Innovative Pedagogy</span>, 1(70), 18–23.</li>
-      </ol>
-
-      <h3>Selected Conference Presentations</h3>
-      <ol class="pubs">
-        <li><span class="me">Dovbysh, I.</span>, Muraviov, O. “Multirotor UAV Propeller Damage Detection Using IMU Measurements.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2025.</li>
-        <li><span class="me">Dovbysh, I.</span> “Complementary Filter for UAV Attitude Estimation.” <span class="venue">Efficiency and Automation of Engineering Solutions in Instrumentation</span>, Kyiv, Dec 2024.</li>
-        <li><span class="me">Dovbysh, I.</span> “Determination of Damage of Multicopter Propellers Based on the Analysis of Acoustic Signals.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2024.</li>
-        <li><span class="me">Dovbysh, I.</span> “Methods of Protecting Workers Depending on the Level of Human–Robot Interaction.” <span class="venue">Efficiency and Automation of Engineering Solutions in Instrumentation</span>, Kyiv, Dec 2023.</li>
-        <li><span class="me">Dovbysh, I.</span> “Issues Related to Using Solar Panels as an Energy Source for UAVs.” <span class="venue">Science and Technology of the XXI Century</span> (online), Dec 2023.</li>
-        <li><span class="me">Dovbysh, I.</span> “The Impact of the European Integration Process on the Realization of the Right to Education in Ukraine.” <span class="venue">Protection of Socially Vulnerable Groups</span>, Kyiv, Nov 2023.</li>
-        <li><span class="me">Dovbysh, I.</span> “Automation of the Thermographic Diagnostic Method for Human Pathologies.” <span class="venue">Instrument Engineering: State and Prospects</span>, Kyiv, May 2023.</li>
-        <li><span class="me">Dovbysh, I.</span> “Dependence of Swarm Architecture on the Level of UAV Autonomy.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2023.</li>
-      </ol>
     </section>
 
     <section id="awards">
@@ -297,31 +235,34 @@
       </div>
     </section>
 
-    <section id="outreach">
-      <h2>Service, Outreach &amp; Mentoring</h2>
-      <ul class="news">
-        <li><span class="date">2026</span> — Technical support for workshops and sessions at <strong>IROS 2026</strong>.</li>
-        <li><span class="date">2026 – now</span> — <strong>Connecting Champions</strong> mentor: one-on-one engineering activities for children and young adults with cancer.</li>
-        <li><span class="date">2026 – now</span> — <strong>Mentoring Youth in Virginia</strong>: educational guidance for refugees from Afghanistan.</li>
-        <li><span class="date">2026</span> — <strong>Fulbright alumni</strong> Q&amp;A sessions and application feedback for future applicants.</li>
-        <li><span class="date">2025 – now</span> — <strong>STEM content creator</strong> promoting research, engineering and scholarships, including work with the Serhiy Prytula Charity Foundation.</li>
-        <li><span class="date">2022 – now</span> — <strong>Physics &amp; math tutor</strong>; open lectures on UAV physics for 600 students across 8 Kyiv schools.</li>
-        <li><span class="date">2024 – 2025</span> — Volunteer tutor for high-school students from vulnerable groups; organizing team for two national student conferences.</li>
-        <li><span class="date">2021 – 2025</span> — Undergraduate student group leader at Igor Sikorsky Kyiv Polytechnic Institute.</li>
-      </ul>
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V., Bohdan, H. A., Momot, A. S. (2025). Autonomous UAV navigation: Technologies for orientation and localization. <span class="venue">Applied Issues of Mathematical Modelling.</span> <a href="https://doi.org/10.32782/mathematicalmodelling/2025-8-1-5" target="_blank" rel="noopener">[DOI]</a></li>
+        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V. (2023). Dependence of the swarm-leader selection algorithm on the level of UAV autonomy. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, 34(73), No. 6, 84–90. <a href="https://doi.org/10.32782/2663-5941/2023.6/13" target="_blank" rel="noopener">[DOI]</a> <em>(in Ukrainian)</em></li>
+        <li><span class="me">Dovbysh, I. O.</span>, Muraviov, O. V., Galagan, R. M., Bohdan, H. A., Momot, A. S. (2023). Power plants and energy sources of modern UAVs. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, 34(73), No. 5, 16–21. <a href="https://doi.org/10.32782/2663-5941/2023.5/04" target="_blank" rel="noopener">[DOI]</a> <em>(in Ukrainian)</em></li>
+        <li>Muraviov, O. V., <span class="me">Dovbysh, I. O.</span>, Galagan, R. M., Bohdan, H. A., Momot, A. S. (2023). Development prospects of technologies for increasing autonomy level of UAVs. <span class="venue">Scientific Notes of Taurida National V.I. Vernadsky University, Series: Technical Sciences</span>, (73) 2, 199–205. <a href="https://ela.kpi.ua/items/a4fece99-9caa-44b8-a5cf-6696c24271d2" target="_blank" rel="noopener">[Link]</a> <em>(in Ukrainian)</em></li>
+        <li>Dovbysh, O. S., Bakhtiarova, K. Sh., Dovbysh, Y. V., <span class="me">Dovbysh, I. O.</span> (2024). Modern aspects of organizing independent work of students of professional pre-higher education institutions during wartime. <span class="venue">Innovative Pedagogy</span>, 1(70), 18–23. <a href="https://www.innovpedagogy.od.ua/archives/2024/70/part_1/5.pdf" target="_blank" rel="noopener">[PDF]</a> <em>(in Ukrainian)</em></li>
+      </ol>
+
+      <h3>Thesis</h3>
+      <ol class="pubs">
+        <li><span class="me">Dovbysh, I.</span> (2025). Quadrotor UAV attitude estimation system. <span class="venue">Bachelor's thesis, Igor Sikorsky Kyiv Polytechnic Institute</span>. Advisor: Prof. Oleksandr Muraviov. <a href="https://ela.kpi.ua/items/84d50b93-8188-4159-a215-5bfa687a792b" target="_blank" rel="noopener">[Link]</a></li>
+      </ol>
+
+      <h3>Selected Conference Presentations</h3>
+      <ol class="pubs">
+        <li><span class="me">Dovbysh, I.</span>, Muraviov, O. “Multirotor UAV Propeller Damage Detection Using IMU Measurements.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2025.</li>
+        <li><span class="me">Dovbysh, I.</span> “Complementary Filter for UAV Attitude Estimation.” <span class="venue">Efficiency and Automation of Engineering Solutions in Instrumentation</span>, Kyiv, Dec 2024.</li>
+        <li><span class="me">Dovbysh, I.</span> “Determination of Damage of Multicopter Propellers Based on the Analysis of Acoustic Signals.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2024.</li>
+        <li><span class="me">Dovbysh, I.</span> “Methods of Protecting Workers Depending on the Level of Human–Robot Interaction.” <span class="venue">Efficiency and Automation of Engineering Solutions in Instrumentation</span>, Kyiv, Dec 2023.</li>
+        <li><span class="me">Dovbysh, I.</span> “Issues Related to Using Solar Panels as an Energy Source for UAVs.” <span class="venue">Science and Technology of the XXI Century</span> (online), Dec 2023.</li>
+        <li><span class="me">Dovbysh, I.</span> “The Impact of the European Integration Process on the Realization of the Right to Education in Ukraine.” <span class="venue">Protection of Socially Vulnerable Groups</span>, Kyiv, Nov 2023.</li>
+        <li><span class="me">Dovbysh, I.</span> “Automation of the Thermographic Diagnostic Method for Human Pathologies.” <span class="venue">Instrument Engineering: State and Prospects</span>, Kyiv, May 2023.</li>
+        <li><span class="me">Dovbysh, I.</span> “Dependence of Swarm Architecture on the Level of UAV Autonomy.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2023.</li>
+      </ol>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Computer Vision &amp; ML</dt><dd>YOLO, RF-DETR, GroundingDINO, OpenCV, PyTorch</dd>
-        <dt>Robotics</dt><dd>SLAM, sensor fusion, object tracking, trajectory planning, state estimation</dd>
-        <dt>Programming</dt><dd>Python, C, C++, Java, JavaScript, PyScript, LabVIEW, MATLAB</dd>
-        <dt>Hardware</dt><dd>Arduino, STM32, Pixhawk, Jetson Nano</dd>
-        <dt>CAD &amp; Simulation</dt><dd>SolidWorks, Ansys, Altium Designer, Multisim, Proteus</dd>
-        <dt>Languages</dt><dd>Ukrainian (native), Russian (native), English (C2), German (A2)</dd>
-      </dl>
-    </section>
   </main>
 </div>
 
