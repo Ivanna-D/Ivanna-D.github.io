@@ -108,6 +108,21 @@
   .skills dt { font-family: "Inter", sans-serif; font-size: 14px; font-weight: 600; padding-top: 3px; }
   .skills dd { margin: 0; }
 
+  /* Research in photos */
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .gallery figure { margin: 0; }
+  .gallery a { display: block; }
+  .gallery img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    border-radius: 8px; border: 1px solid var(--line); background: var(--card);
+    transition: opacity .15s;
+  }
+  .gallery a:hover img { opacity: .88; }
+  .gallery figcaption {
+    font-family: "Inter", sans-serif; font-size: 14px; color: var(--muted);
+    line-height: 1.45; margin-top: 6px;
+  }
+
   footer {
     text-align: center; color: var(--muted); font-family: "Inter", sans-serif;
     font-size: 13px; padding: 24px 16px 40px; border-top: 1px solid var(--line);
@@ -122,6 +137,7 @@
     h1, .pron { text-align: center; }
     .skills { grid-template-columns: 1fr; gap: 2px; }
     .skills dd { margin-bottom: 10px; }
+    .gallery { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -133,6 +149,7 @@
     <a href="#interests">Research</a>
     <a href="#awards">Awards</a>
     <a href="#publications">Publications</a>
+    <a href="#photos">Photos</a>
     <a href="cv.pdf">CV</a>
   </div>
 </nav>
@@ -164,8 +181,8 @@
       <h1>Ivanna Dovbysh</h1>
       <div class="pron">Іванна Довбиш · Robotics for Human Safety</div>
 
-      <p>I am a <strong>Fulbright scholar</strong> and M.S. student in Electrical Engineering at the <a href="https://www.ucf.edu/"><strong>University of Central Florida</strong></a>, where I work in the <a href="https://lcwnlab.eecs.ucf.edu">Learning, Communications, and Wireless Networks Lab</a> with <a href="https://www.cecs.ucf.edu/faculty/nazanin-rahnavard/">Prof. Nazanin Rahnavard</a>. Using Meta Project Aria glasses, I am developing a system that detects moving obstacles and predicts their trajectories and possible collisions, with applications in safe driving and in helping people with impaired vision navigate crowded environments.</p>
-      <p>I received my B.S. with Honors from the <a href="https://kpi.ua/en/"><strong>National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”</strong></a>, specializing in Automation and Non-Destructive Testing Systems, where I was advised by <a href="https://asnk.kpi.ua/index.php/pro-kafedru/vykladachi/26-muraviov-oleksandr-volodymyrovych">Dr. Oleksandr Muraviov</a>. Most recently, I worked with <a href="https://theairlab.org/team/sebastian/">Prof. Sebastian Scherer</a> at the <a href="https://theairlab.org/"><strong>AirLab at Carnegie Mellon University</strong></a> on the DARPA Triage Challenge, developing people-detection systems for disaster response. Before that, I built interactive outreach tools with Dr. Benjamin Couturier at the <strong>LHCb experiment at CERN</strong>, and worked on vision-based navigation of quadrotor drones with <a href="https://atayebi.lakeheadu.ca">Prof. Abdelhamid Tayebi</a> at <strong>Lakehead University</strong> as a Mitacs Globalink Research Intern.</p>
+      <p>I am a <strong>Fulbright scholar</strong> and M.S. student in Electrical Engineering at the <a href="https://www.ucf.edu/"><strong>University of Central Florida</strong></a>, where I work in the <a href="https://lcwnlab.eecs.ucf.edu">Learning, Communications, and Wireless Networks Lab</a> with <a href="https://www.cecs.ucf.edu/faculty/nazanin-rahnavard/">Dr. Nazanin Rahnavard</a>. Using Meta Project Aria glasses, I am developing a system that detects moving obstacles and predicts their trajectories and possible collisions, with applications in safe driving and in helping people with impaired vision navigate crowded environments.</p>
+      <p>I received my B.S. with Honors from the <a href="https://kpi.ua/en/"><strong>National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”</strong></a>, specializing in Automation and Non-Destructive Testing Systems, where I was advised by <a href="https://asnk.kpi.ua/index.php/pro-kafedru/vykladachi/26-muraviov-oleksandr-volodymyrovych">Dr. Oleksandr Muraviov</a>. Most recently, I worked with <a href="https://theairlab.org/team/sebastian/">Dr. Sebastian Scherer</a> at the <a href="https://theairlab.org/"><strong>AirLab at Carnegie Mellon University</strong></a> on the DARPA Triage Challenge, developing people-detection systems for disaster response. Before that, I built interactive outreach tools with Dr. Benjamin Couturier at the <strong>LHCb experiment at CERN</strong>, and worked on vision-based navigation of quadrotor drones with <a href="https://atayebi.lakeheadu.ca">Dr. Abdelhamid Tayebi</a> at <strong>Lakehead University</strong> as a Mitacs Globalink Research Intern.</p>
       <p>Feel free to <a href="mailto:ivanna.dovbysh@gmail.com">reach out</a> about potential collaborations or talks, or if you have questions about studying abroad, finding opportunities, or choosing a field of study.</p>
 
       <div class="callout">🎤 <strong>Upcoming talk:</strong> I've been invited to speak at Igor Sikorsky Kyiv Polytechnic Institute on <strong>November 16</strong> about studying abroad. Hope to see you online!</div>
@@ -248,7 +265,7 @@
 
       <h3>Thesis</h3>
       <ol class="pubs">
-        <li><span class="me">Dovbysh, I.</span> (2025). Quadrotor UAV attitude estimation system. <span class="venue">Bachelor's thesis, Igor Sikorsky Kyiv Polytechnic Institute</span>. Advisor: Prof. Oleksandr Muraviov. <a href="https://ela.kpi.ua/items/84d50b93-8188-4159-a215-5bfa687a792b" target="_blank" rel="noopener">[Link]</a></li>
+        <li><span class="me">Dovbysh, I.</span> (2025). Quadrotor UAV attitude estimation system. <span class="venue">Bachelor's thesis, Igor Sikorsky Kyiv Polytechnic Institute</span>. Advisor: Dr. Oleksandr Muraviov. <a href="https://ela.kpi.ua/items/84d50b93-8188-4159-a215-5bfa687a792b" target="_blank" rel="noopener">[Link]</a></li>
       </ol>
 
       <h3>Selected Conference Presentations</h3>
@@ -262,6 +279,44 @@
         <li><span class="me">Dovbysh, I.</span> “Automation of the Thermographic Diagnostic Method for Human Pathologies.” <span class="venue">Instrument Engineering: State and Prospects</span>, Kyiv, May 2023.</li>
         <li><span class="me">Dovbysh, I.</span> “Dependence of Swarm Architecture on the Level of UAV Autonomy.” <span class="venue">A Look Into the Future of Instrument Engineering</span>, Kyiv, May 2023.</li>
       </ol>
+    </section>
+
+    <section id="photos">
+      <h2>Research in Photos</h2>
+      <div class="gallery">
+        <figure>
+          <a href="IROS2026.jpeg" target="_blank" rel="noopener"><img src="IROS2026.jpeg" alt="At IROS 2026 in Pittsburgh, where my video won the Video Award" loading="lazy"></a>
+          <figcaption>At IROS 2026 in Pittsburgh, where my video won the Video Award</figcaption>
+        </figure>
+        <figure>
+          <a href="Airlab.jpeg" target="_blank" rel="noopener"><img src="Airlab.jpeg" alt="Research internship at the AirLab, Carnegie Mellon University" loading="lazy"></a>
+          <figcaption>Research internship at the AirLab, Carnegie Mellon University</figcaption>
+        </figure>
+        <figure>
+          <a href="muskie.jpg" target="_blank" rel="noopener"><img src="muskie.jpg" alt="Presenting my research to fellow Muskie Fellows" loading="lazy"></a>
+          <figcaption>Presenting my research to fellow Muskie Fellows</figcaption>
+        </figure>
+        <figure>
+          <a href="Project%20Aria.jpeg" target="_blank" rel="noopener"><img src="Project%20Aria.jpeg" alt="Testing my obstacle-prediction system with Project Aria glasses" loading="lazy"></a>
+          <figcaption>Testing my obstacle-prediction system with Project Aria glasses</figcaption>
+        </figure>
+        <figure>
+          <a href="Prof.jpeg" target="_blank" rel="noopener"><img src="Prof.jpeg" alt="Showing high school students why engineering is worth studying" loading="lazy"></a>
+          <figcaption>Showing high school students why engineering is worth studying</figcaption>
+        </figure>
+        <figure>
+          <a href="drone_lecture.jpeg" target="_blank" rel="noopener"><img src="drone_lecture.jpeg" alt="Giving an open lecture on drones to 800 Ukrainian students" loading="lazy"></a>
+          <figcaption>Giving an open lecture on drones to 800 Ukrainian students</figcaption>
+        </figure>
+        <figure>
+          <a href="ACC2024.jpeg" target="_blank" rel="noopener"><img src="ACC2024.jpeg" alt="Attending the American Control Conference 2024 — my first international conference" loading="lazy"></a>
+          <figcaption>Attending the American Control Conference 2024 — my first international conference</figcaption>
+        </figure>
+        <figure>
+          <a href="Mitacs.jpeg" target="_blank" rel="noopener"><img src="Mitacs.jpeg" alt="Working with quadrotor drones at Lakehead University (Mitacs Globalink)" loading="lazy"></a>
+          <figcaption>Working with quadrotor drones at Lakehead University (Mitacs Globalink)</figcaption>
+        </figure>
+      </div>
     </section>
 
   </main>
