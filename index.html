@@ -109,11 +109,11 @@
   .skills dd { margin: 0; }
 
   /* Research in photos */
-  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .gallery figure { margin: 0; }
+  .gallery { columns: 2; column-gap: 18px; }
+  .gallery figure { margin: 0 0 18px; break-inside: avoid; }
   .gallery a { display: block; }
   .gallery img {
-    width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    width: 100%; height: auto; display: block;
     border-radius: 8px; border: 1px solid var(--line); background: var(--card);
     transition: opacity .15s;
   }
@@ -137,7 +137,7 @@
     h1, .pron { text-align: center; }
     .skills { grid-template-columns: 1fr; gap: 2px; }
     .skills dd { margin-bottom: 10px; }
-    .gallery { grid-template-columns: 1fr; }
+    .gallery { columns: 1; }
   }
 </style>
 </head>
@@ -285,6 +285,10 @@
       <h2>Research in Photos</h2>
       <div class="gallery">
         <figure>
+          <a href="Project%20Aria.jpeg" target="_blank" rel="noopener"><img src="Project%20Aria.jpeg" alt="Testing my obstacle-prediction system with Project Aria glasses" loading="lazy"></a>
+          <figcaption>Testing my obstacle-prediction system with Project Aria glasses</figcaption>
+        </figure>
+        <figure>
           <a href="IROS2026.jpeg" target="_blank" rel="noopener"><img src="IROS2026.jpeg" alt="At IROS 2026 in Pittsburgh, where my video won the Video Award" loading="lazy"></a>
           <figcaption>At IROS 2026 in Pittsburgh, where my video won the Video Award</figcaption>
         </figure>
@@ -295,10 +299,6 @@
         <figure>
           <a href="muskie.jpg" target="_blank" rel="noopener"><img src="muskie.jpg" alt="Presenting my research to fellow Muskie Fellows" loading="lazy"></a>
           <figcaption>Presenting my research to fellow Muskie Fellows</figcaption>
-        </figure>
-        <figure>
-          <a href="Project%20Aria.jpeg" target="_blank" rel="noopener"><img src="Project%20Aria.jpeg" alt="Testing my obstacle-prediction system with Project Aria glasses" loading="lazy"></a>
-          <figcaption>Testing my obstacle-prediction system with Project Aria glasses</figcaption>
         </figure>
         <figure>
           <a href="Prof.jpeg" target="_blank" rel="noopener"><img src="Prof.jpeg" alt="Showing high school students why engineering is worth studying" loading="lazy"></a>
